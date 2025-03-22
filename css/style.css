@@ -533,3 +533,40 @@
         font-style: normal;
         display: block;
     }
+
+/* Ajustos per a la capçalera fixa en mòbils */
+.header-carousel .owl-carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ocupa tota la pantalla */
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.header-carousel .owl-carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Corregir el problema de l'amplada en zoom petit */
+.page-header {
+    background-size: cover !important;
+    background-position: center !important;
+    width: 100%;
+}
+
+/* Separació per evitar que el text i els botons quedin massa junts */
+.page-header-inner {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .page-header-inner {
+        padding: 10px; /* Més espai en pantalles petites */
+    }
+    .header-carousel .owl-carousel-item {
+        height: 50vh; /* Reduir alçada per millorar visibilitat */
+    }
+}
